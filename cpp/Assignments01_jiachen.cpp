@@ -9,7 +9,7 @@ using namespace std;
 //problem 1
 vector<vector<int>> gachen1(vector<vector<int>>& gaps){
      if (gaps.empty())
-        return {};  //define a two dimensional vector gachen1 to store gaps
+        return { };  //define a two dimensional vector gachen1 to store gaps
      
     sort(gaps.begin(), gaps.end(), [](const vector<int>& a, const vector<int>& b) {
         return a[0] < b[0];
@@ -255,7 +255,6 @@ int gachen9kthnumber(vector<int>& numbers,int k){
 long long gachen10merge(vector<int>& values, vector<int>& temp, int left, int mid, int right){
     int i=left, j=mid+1, k=left;
     long long count=0;//count the number of inversions
-
     while (i<=mid && j<=right){
         if (values[i]<=values[j]){
             temp[k]=values[i];
